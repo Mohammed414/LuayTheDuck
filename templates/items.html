@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+pizzas
+{% endblock %}
+{% block items %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for row in rows %}
+                    <div class="col" style="width: 18rem;">
+                      <div class="card h-100">
+                        <img src="/static/{{row[6]}}" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                          <h5 class="card-title">{{ row[2] }}</h5>
+                          <p class="card-text">{{ row[3] }}</p>
+                        </div>
+                      </div>
+                    </div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}
